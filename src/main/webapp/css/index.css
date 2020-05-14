@@ -1,0 +1,87 @@
+.s-pic-content {
+    width: 100%;
+    height: 2016px;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+}
+
+.col-sub {
+    float: left;
+}
+
+.pp-sub-list {
+    width: 940px;
+    /*background:url(../images/erweima.jpg);*/
+}
+
+.pp-sub-list .item {
+    float: left;
+    margin: 0 0 5px 5px;
+    display: inline;
+    text-align: center;
+}
+
+div .qrcode {
+    float: bottom;
+    margin: 0 0 5px 5px;
+    display: flex;
+}
+
+.pp-sub-list .item i {
+    font-size: 10px;
+    font-family: '微软雅黑', Arial;
+    text-align: center;
+}
+
+.pp-sub-list .pic {
+    margin: 2px;
+    width: 75px;
+    height: 75px;
+    display: block;
+    -webkit-transform: scale(1);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 500ms;
+    -moz-transform: scale(1);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 200ms;
+    -o-transform: scale(1);
+    -o-transition-timing-function: ease-out;
+    -o-transition-duration: 500ms;
+    -ms-transform: scale(1);
+    -ms-transition-timing-function: ease-out;
+    -ms-transition-duration: 500ms;
+    transform: scale(1);
+    transition-timing-function: ease-out;
+    transition-duration: 500ms;
+}
+
+.pp-sub-list .pic:hover {
+    -webkit-transform: scale(1.05);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 500ms;
+    -moz-transform: scale(1.05);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 200ms;
+    -o-transform: scale(1.05);
+    -o-transition-timing-function: ease-out;
+    -o-transition-duration: 500ms;
+    -ms-transform: scale(1.05);
+    -ms-transition-timing-function: ease-out;
+    -ms-transition-duration: 500ms;
+    transform: scale(1.05);
+    transition-timing-function: ease-out;
+    transition-duration: 500ms;
+}
+
+.pp-sub-list .desc {
+    color: #888;
+    margin-top: 4px;
+}
+
+.pp-sub-list .num {
+    color: #666;
+    margin-top: 12px;
+}
+

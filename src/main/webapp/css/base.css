@@ -1,0 +1,109 @@
+a, abbr, address, article, aside, audio, big, body, button, canvas, caption, dd, details, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, input, label, li, mark, menu, nav, object, ol, output, p, q, section, select, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: '微软雅黑', Arial
+}
+
+li, ol, ul {
+    list-style: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+button, input, select, textarea {
+    font-family: inherit
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.cf {
+    zoom: 1
+}
+
+.cf:after {
+    content: "";
+    display: table;
+    clear: both;
+    overflow: hidden
+}
+
+a {
+    text-decoration: none;
+    color: #000
+}
+
+a:hover {
+    text-decoration: none
+}
+
+a, button, img, input, label, select {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    outline: medium none
+}
+
+input::-moz-focus-inner {
+    border: none;
+    padding: 0
+}
+
+input, select {
+    vertical-align: middle
+}
+
+button, input[type=button], input[type=reset], input[type=submit], select {
+    -webkit-appearance: none
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #ccc
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: #ccc
+}
+
+article, aside, figure, footer, header, nav, section {
+    display: block
+}
+
+p {
+    word-break: break-all;
+    word-wrap: break-word
+}
+
+address, caption, cite, code, dfn, em, h1, h2, h3, h4, h5, h6, i, strong, th, var {
+    font-weight: 400;
+    font-style: normal
+}
+
+fieldset {
+    border: none;
+    display: block
+}
+
+body, html {
+    -webkit-touch-callout: none;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto
+}
+
+.weui-tabbar {
+    max-width: 640px;
+    min-width: 320px
+}
+
+#think_page_trace_open {
+    display: none !important
+}
