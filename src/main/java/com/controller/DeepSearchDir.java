@@ -1,4 +1,6 @@
 package com.controller;
+import com.sun.org.apache.bcel.internal.generic.NEW;
+
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -15,10 +17,7 @@ public class DeepSearchDir {
 
     //色差范围0~255
     public static int color_range = 210;
-    //源图片所在文件夹
-    public static String source_dir = "C:\\Users\\dell\\Pictures\\访苏";
-    //目标图片所在文件夹
-    public static String target_path = "C:\\Users\\dell\\Pictures\\访苏";
+
 
 
 
@@ -26,7 +25,9 @@ public class DeepSearchDir {
      * @param args
      */
     public static void main(String[] args) {
-        File dir = new File("C:\\Users\\dell\\Pictures\\访苏");
+        File dir = new File("C:\\Users\\dell\\Pictures\\访苏\\111.jpg");
+        System.out.println(dir.getParent());
+        /*File dir = new File("C:\\Users\\dell\\Pictures\\访苏");
         String targetPath = "C:\\Users\\dell\\Pictures\\0514\\";
         int count = listDir(dir,targetPath,1);
 
@@ -36,7 +37,7 @@ public class DeepSearchDir {
         File tarFiles[] = tarDir.listFiles();
         if(tarFiles.length == count){
 
-        }
+        }*/
     }
 
 
@@ -48,16 +49,15 @@ public class DeepSearchDir {
      * @param targetPath 目标文件夹
      * @param level 遍历层级
      */
-    private static int listDir(File dir,String targetPath,int level) {
-        String dirString = dir.toString();
+    public static int listDir(File dir,String targetPath,int height,int width,int level) {
         File files[]=dir.listFiles();
         level++;
         for(File f:files){
             if(f.isDirectory()){
-                listDir(f,targetPath,level);
+                listDir(f,targetPath,height, width,level);
             }
             else {
-                scale(f,targetPath+f.getName(),500, 600, true);
+                scale(f,targetPath+f.getName(),height, width, true);
             }
         }
         return files.length;
@@ -125,8 +125,9 @@ public class DeepSearchDir {
         }
     }
 
-    private void addSy(File sourceFile,File tarFile) throws Exception{
-        BufferedImage image = ImageIO.read(new File("C:\\Users\\dell\\Pictures\\微信图片_20200513162215.png"));
+    public static void toumingPicture(String sourceFileStr) throws Exception{
+        File sourceFile = new File(sourceFileStr);
+        BufferedImage image = ImageIO.read(sourceFile);
         // 高度和宽度
         int height = image.getHeight();
         int width = image.getWidth();
@@ -157,9 +158,8 @@ public class DeepSearchDir {
         }
         // 绘制设置了RGB的新图片,这一步感觉不用也可以只是透明地方的深浅有变化而已，就像蒙了两层的感觉
         g2D.drawImage(bufferedImage, 0, 0, null);
-
         // 生成图片为PNG
-        ImageIO.write(bufferedImage, "png", new File("C:\\Users\\dell\\Pictures\\111.png"));
+        ImageIO.write(bufferedImage, "png", new File(sourceFile.getParent() + "\\touming.png"));
     }
 
     // 判断是背景还是内容

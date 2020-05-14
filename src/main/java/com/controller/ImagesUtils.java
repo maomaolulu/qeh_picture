@@ -412,7 +412,7 @@ public  class ImagesUtils {
 			}
 			g.drawImage(waterImage, x, y, width_1, height_1, null); // 水印文件结束
 			g.dispose();
-			ImageIO.write(bufferedImage, PICTRUE_FORMATE_JPG, new File("C:\\Users\\dell\\Pictures\\2.jpg"));
+			ImageIO.write(bufferedImage, PICTRUE_FORMATE_JPG, file);
 
 		} catch (IOException e) {
 			e.printStackTrace();
