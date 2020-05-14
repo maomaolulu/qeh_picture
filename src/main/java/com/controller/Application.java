@@ -1,5 +1,7 @@
 package com.controller;
 
+import org.apache.commons.lang.StringUtils;
+
 import java.io.File;
 
 /**
@@ -13,7 +15,8 @@ public class Application {
     //源图片所在文件夹
     public static String source_dir = "C:\\Users\\dell\\Pictures\\访苏";
     //目标图片所在文件夹
-    public static String target_path = "C:\\Users\\dell\\Pictures\\0514\\";
+    public static String target_path = "C:\\Users\\dell\\Pictures\\0514";
+
 
     //生成透明图片时，图片的源路径
     public static String touming_path = "";
@@ -21,7 +24,7 @@ public class Application {
     //加图片水印 ,源图片
     public static String press_image_path = "";
     //水印图片
-    public static String sy_image_path = "C:\\Users\\dell\\Pictures\\111.png";
+    public static String sy_image_path = "C:\\Users\\dell\\Pictures\\透明\\touming.png";
 
 
     //设置图片裁剪尺寸
@@ -30,12 +33,20 @@ public class Application {
 
 
 
-    public static void main(String[] args){
+    public static void main(String[] args)throws Exception{
+        int count = 0;
            /*1.设置图片为统一尺寸*/
-        int count = changePictureSize();
-
+        if(StringUtils.isNotBlank(source_dir) && StringUtils.isNotBlank(target_path)){
+            count = changePictureSize();
+        }
           /*2.需要加图片水印时打开*/
-        pressImage(count);
+        if(count > 0){
+            pressImage(count);
+        }
+        if(StringUtils.isNotBlank(touming_path)){
+            toumingPicture();
+        }
+
 
 
     }
@@ -52,7 +63,7 @@ public class Application {
      * 生成透明图片
      * @throws Exception
      */
-    public static void toumingPicture(int count) throws Exception{
+    public static void toumingPicture() throws Exception{
         DeepSearchDir.toumingPicture(touming_path);
     }
 

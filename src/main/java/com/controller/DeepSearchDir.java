@@ -57,7 +57,7 @@ public class DeepSearchDir {
                 listDir(f,targetPath,height, width,level);
             }
             else {
-                scale(f,targetPath+f.getName(),height, width, true);
+                scale(f,targetPath + "\\" + f.getName(),height, width, true);
             }
         }
         return files.length;
