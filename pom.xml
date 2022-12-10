@@ -10,7 +10,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.version>4.2.0.RELEASE</spring.version>
+        <spring.version>6.0.0</spring.version>
         <zxing-core.version>3.2.2-SNAPSHOT</zxing-core.version>
         <zxing-client-j2se.version>3.2.2-SNAPSHOT</zxing-client-j2se.version>
         <commons-lang.version>2.4</commons-lang.version>
